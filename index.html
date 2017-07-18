@@ -11,7 +11,12 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+        <style>
+            body {
+                font-family: "Lato";
+            }
+        </style>
     </head>
     <body>
 
@@ -25,6 +30,18 @@
     Currently in <em>alpha</em>. This document will change as development progresses.<br>
     Follow <a href="http://twitter.com/BERDGames">@BERDGames on Twitter</a> for development updates once Battlebits hits beta!
 </p>
+
+<h2>What is all this on the screen?</h2>
+
+<img src="battlebits.png" alt="Battlebits">
+
+<ol>
+    <li>Name</li>
+    <li>Health</li>
+    <li>Power</li>
+    <li>Rank</li>
+    <li>Job</li>
+</ol>
 
 <h2>Put me in the ring, coach!</h2>
 
@@ -43,20 +60,21 @@
 <h4>Fighting</h4>
 
 <p>To join the battle, you don't have to do anything special, just cheer away!<br>
-The amount of bits you cheer equals the amount of health you'll get.</p>
+The amount of bits you cheer when you join the battle equals the amount of health you'll start with.</p>
 
 <p>Additionally, you can pick a job to grant yourself extra perks while fighting.<br>
 To pick a job, you just add the corresponding hashtag in your message. Check the Jobs heading below to see which jobs you can pick.</p>
 
 <p>If a battle is already in progress, you will be put in the queue. Otherwise, you will be put in the empty spot.</p>
 
-<p>If you're already battling, you will heal yourself instead. You do not need to add #left or #right to heal yourself.<br>
+<p>If you're already battling, you will add power to yourself instead. You do not need to add #left or #right to add power yourself.<br>
 You can also change jobs if you want. Just add the new job's hashtag in the message and you'll switch jobs.</p>
 
 <h4>Supporting</h4>
 
-<p>To support a person on the battlefield, you can cheer using either #left or #right in your message.
-This will heal the person with the amount of bits you used in your message.</p>
+<p>To support a person on the battlefield, you can cheer by putting either #left or #right in your message.<br>
+This will give the person you cheer on power. The amount of bits corresponds to how much power you'll give them.<br>
+If you want to heal the person, see the Healing header below.</p>
 
 <p><strong>NOTE:</strong> If there is no person in that spot, you will enter that spot as a combatant.</p>
 
@@ -90,7 +108,29 @@ You will get a randomly assigned job.</p>
 <h2>The Fight</h2>
 
 <p>Each fight consists of quick turns. The battle continues until one or both combatants reach 0 HP.<br>
-One turn consists of either an attack or a heal. Attacks can miss.</p>
+One turn consists of either an attack or a heal (depending on the job). Attacks can miss.</p>
+
+<h2>Power</h2>
+
+<p>During the fight, you'll accumulate power over time or when you or someone else cheers for you.</p>
+<p>Power has two uses right now: Limit Break and healing.</p>
+
+<h2>Healing (#heal or #powerHeal)</h2>
+
+<p>If you want to heal instead of adding power, add #heal to the message. This will use all the bits in the message to heal instead.<br>
+If you are fighting, you can tap into power to heal by using #powerHeal. This will use up all the bits in the message and all of your power to heal yourself.</p>
+
+<p>If you don't want to use all of the bits and/or power, you can specify an amount to #heal&gt;amount&lt; and #powerHeal&gt;amount&lt;.<br>
+For example, if you cheer with 500 bits and use #heal200, you'll get 200 HP and get 300 power.<br>
+If you're fighting, cheer using 300 bits and use #powerHeal200, you'll get 200 HP and get 100 power.<br>
+If you instead use #powerHeal400, you'll use all 300 bits and 100 of your power to heal for 400 HP.</p>
+
+<h2>Limit Break (#lb)</h2>
+
+<p><strong>Cost:<strong> 500 power<br>
+If you have 500 power, you can use a Limit Break to deal 1000 damage by adding #lb to your cheer message.<br>
+Bits are also counted to the power cost, so you can have 450 power and cheer 50 bits and activate the Limit Break.<br>
+Only the person fighting can initiate a Limit Break.</p>
 
 <h2>Jobs</h2>
 
